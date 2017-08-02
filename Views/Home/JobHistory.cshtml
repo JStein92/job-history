@@ -1,0 +1,12 @@
+<h1>All my past jobs</h1>
+
+@foreach(var job in Model)
+{
+  <h1>@job.GetEmployer()</h1>
+  <h2>@job.GetTitle()</h2>
+  <h3>Time worked: @job.GetStartDate().Month/@job.GetStartDate().Day/@job.GetStartDate().Year to @job.GetEndDate().Month/@job.GetEndDate().Day/@job.GetStartDate().Year</h3>
+  <p>Description: @job.GetDescription()</p>
+}
+
+<a href="/JobAdd">Add another job</a>
+<a href="/">Return to home</a>
